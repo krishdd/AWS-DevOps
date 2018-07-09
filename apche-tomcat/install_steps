@@ -7,6 +7,33 @@ Pre-req:
 Steps:
 1.Install java1.8 JDK
 yum install java-1.8.0-openjdk
-2. Set java home path 
+2. Set java home path.
+
+3. Create tomcat user, group and dirrectories.
+groupadd tomcat
+useradd -g tomcat -d /opt/tomcat -s /bin/nologin tomcat
+mkdir -p /opt/tomcat
+
+4. Download the desired tomcat version to ec2 instance, in this case it is - "apache-tomcat-8.5.32"
+wget http://www-us.apache.org/dist/tomcat/tomcat-8/v8.5.32/bin/apache-tomcat-8.5.32.tar.gz
+
+5. Unzip and untar the downloaded file. 
+tar -zxvf apache-tomcat*tar.gz
+mv apache-tomcat-8.5.32/* /opt/tomcat/
+
+6. set the ownership
+chown -R tomcat:tomcat /opt/tomcat/
+
+7. move the contents of dir apache-tomcat-8.5.32 to newly created /opt/tomcat
+mv apache-tomcat-8.5.32/* /opt/tomcat/
+
+8.
+
+
+
+
+To get GUI mode:
+
+
 
 
