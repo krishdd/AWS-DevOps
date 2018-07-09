@@ -27,13 +27,25 @@ chown -R tomcat:tomcat /opt/tomcat/
 7. move the contents of dir apache-tomcat-8.5.32 to newly created /opt/tomcat
 mv apache-tomcat-8.5.32/* /opt/tomcat/
 
-8.
+8. if firewall is enabled, the ports configured for tomcat must be open and should allow traffic in AWS SG.
+firewall-cmd --permanent --add-port=8080/tcp
+firewall-cmd --reload
+firewall-cmd --list-port
 
+9. Start/Stop tomcat services.
+sh /opt/tomcat/bin/startup.sh
+sh /opt/tomcat/bin/shutdown.sh
 
+10. Verify tomcat process running.
+ps -ef|grep tomcat 
+netstat -an|grep 8080
 
-
-To get GUI mode:
-
-
+NB: The default installation of tomcat will enable access GUI from local machine only. Since ec2-instance has been in this case,
+to connect remotely the following taks should be performed. 
+1. Create tomcat users,roles etc.,
+2. Modify configurations in "context.xml" to allow remote connection.
+3. Optionally the defult port of 8080 also can be changed in "server.xml"
+4. Restart tomcat services.
+5. Log in using GUI.
 
 
