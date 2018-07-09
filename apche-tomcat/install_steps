@@ -30,6 +30,8 @@ mv apache-tomcat-8.5.32/* /opt/tomcat/
 
 6. set the ownership
 chown -R tomcat:tomcat /opt/tomcat/
+chmod +x /opt/tomcat/bin/startup.sh
+chmod +x /opt/tomcat/bin/shutdown.sh
 
 7. move the contents of dir apache-tomcat-8.5.32 to newly created /opt/tomcat
 mv apache-tomcat-8.5.32/* /opt/tomcat/
