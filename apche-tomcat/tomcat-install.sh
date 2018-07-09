@@ -10,6 +10,8 @@ chown -R tomcat:tomcat /opt/tomcat/
 firewall-cmd --permanent --add-port=8080/tcp
 firewall-cmd --reload
 firewall-cmd --list-port
+chmod +x /opt/tomcat/bin/startup.sh
+chmod +x /opt/tomcat/bin/shutdown.sh
 sh /opt/tomcat/bin/startup.sh
 sh /opt/tomcat/bin/shutdown.sh
 sh /opt/tomcat/bin/startup.sh
