@@ -1,8 +1,8 @@
-Installation and Configuraiton of Apche-Tomcat on AWS ec2 Instance
+Installation and Configuraiton of Apache-Tomcat on AWS ec2-Instance
 
 Pre-req:
-1. java 1.8
-2. Set java home path 
+a. java 1.8
+b. Set java home path 
 
 Steps:
 1.Install java1.8 JDK
