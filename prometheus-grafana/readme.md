@@ -1,5 +1,7 @@
-Prometheus Installation:
+# Prometheus Installation
+```sh
 https://github.com/prometheus/prometheus/releases/
+```
 
 wget https://github.com/prometheus/prometheus/releases/download/v2.4.1/prometheus-2.4.1.linux-amd64.tar.gz
 tar -xzvf  prometheus-2.4.1.linux-amd64.tar.gz
