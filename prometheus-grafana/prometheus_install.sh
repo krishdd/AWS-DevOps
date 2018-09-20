@@ -1,4 +1,5 @@
 #!/bin/bash
+yum install wget elinks -y
 wget https://github.com/prometheus/prometheus/releases/download/v2.4.1/prometheus-2.4.1.linux-amd64.tar.gz
 tar -xzvf  prometheus-2.4.1.linux-amd64.tar.gz
 cd prometheus-2.2.1.linux-amd64/
