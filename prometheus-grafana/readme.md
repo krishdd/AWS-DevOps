@@ -81,7 +81,7 @@ systemctl start prometheus
 wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-5.2.4-1.x86_64.rpm 
 sudo yum install grafana-5.2.4-1.x86_64.rpm 
 ```
-OR
+or
 ```sh
 yum install https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-5.2.4-1.x86_64.rpm -y 
 ```
