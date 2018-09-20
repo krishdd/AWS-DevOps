@@ -1,41 +1,50 @@
 # Prometheus Installation
-```sh
+*#* Prometheus official github repo
 https://github.com/prometheus/prometheus/releases/
-```
-
+## download packages
+```sh
 wget https://github.com/prometheus/prometheus/releases/download/v2.4.1/prometheus-2.4.1.linux-amd64.tar.gz
+```
+```sh
 tar -xzvf  prometheus-2.4.1.linux-amd64.tar.gz
 cd prometheus-${PROMETHEUS_VERSION}.linux-amd64/
-# if you just want to start prometheus as root
-#./prometheus --config.file=prometheus.yml
-
-# create user
+```
+## If you just want to start prometheus as root execute below else create user
+```sh
+./prometheus --config.file=prometheus.yml
+```
+## create user
+```sh
 useradd --no-create-home --shell /bin/false prometheus
-
-# create directories
+```
+## create directories
+```sh
 mkdir -p /etc/prometheus
 mkdir -p /var/lib/prometheus
-
-# set ownership
+```
+## set ownership
+```sh
 chown prometheus:prometheus /etc/prometheus
 chown prometheus:prometheus /var/lib/prometheus
-
-# copy binaries
+```
+## copy binaries
+```sh
 cp prometheus /usr/local/bin/
 cp promtool /usr/local/bin/
-
 chown prometheus:prometheus /usr/local/bin/prometheus
 chown prometheus:prometheus /usr/local/bin/promtool
-
-# copy config
+```
+## copy config
+```sh
 cp -r consoles /etc/prometheus
 cp -r console_libraries /etc/prometheus
 cp prometheus.yml /etc/prometheus/prometheus.yml
 
 chown -R prometheus:prometheus /etc/prometheus/consoles
 chown -R prometheus:prometheus /etc/prometheus/console_libraries
-
-# setup systemd
+```
+## setup systemd
+```sh
 echo '[Unit]
 Description=Prometheus
 Wants=network-online.target
@@ -53,7 +62,11 @@ ExecStart=/usr/local/bin/prometheus \
 
 [Install]
 WantedBy=multi-user.target' > /etc/systemd/system/prometheus.service
-
+```
+## start prometheus process
+```sh
 systemctl daemon-reload
 systemctl enable prometheus
 systemctl start prometheus
+```
+
