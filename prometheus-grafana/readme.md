@@ -74,8 +74,8 @@ systemctl start prometheus
 
 
 ## grafana documentation links for installation and configuration!
-https://grafana.com/grafana/download?platform=linux
-http://docs.grafana.org/installation/rpm/
+- https://grafana.com/grafana/download?platform=linux
+- http://docs.grafana.org/installation/rpm/
 ### Download packages
 ```sh
 wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-5.2.4-1.x86_64.rpm 
