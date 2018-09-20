@@ -3,6 +3,7 @@
 https://github.com/prometheus/prometheus/releases/
 ## download packages
 ```sh
+yum install wget elinks git -y
 wget https://github.com/prometheus/prometheus/releases/download/v2.4.1/prometheus-2.4.1.linux-amd64.tar.gz
 ```
 ```sh
