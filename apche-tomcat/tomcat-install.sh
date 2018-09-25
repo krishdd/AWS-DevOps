@@ -1,5 +1,5 @@
 #!/bin/bash
-#yum install java-1.8.0-openjdk
+yum install java-1.8.0-openjdk
 java -version
 groupadd tomcat
 useradd -g tomcat -d /opt/tomcat -s /bin/nologin tomcat
@@ -13,14 +13,12 @@ sh /opt/tomcat/bin/startup.sh
 sh /opt/tomcat/bin/shutdown.sh
 sh /opt/tomcat/bin/startup.sh
 netstat -an|grep 8080
-yum install -y iptables-services
-systemctl enable iptables
-iptables -I INPUT 1 -p tcp --dport 8080 -j ACCEPT
-iptables -I INPUT 1 -p tcp --dport 80 -j ACCEPT
-iptables -A PREROUTING -t nat -1 eth0 -p tcp --dport 80 -j REDIREDT --to-port 8080\n
-iptables-save > /etc/sysconfig/iptables\n
-
-OR use firewalld 
+#yum install -y iptables-services
+#systemctl enable iptables
+#iptables -I INPUT 1 -p tcp --dport 8080 -j ACCEPT
+#iptables -I INPUT 1 -p tcp --dport 80 -j ACCEPT
+#iptables -A PREROUTING -t nat -1 eth0 -p tcp --dport 80 -j REDIREDT --to-port 8080\n
+#iptables-save > /etc/sysconfig/iptables\n
 
 yum install -y firewalld
 systemctl enable firewalld
