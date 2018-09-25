@@ -1,8 +1,8 @@
 # Installation and Configuraiton of Apache-Tomcat on AWS ec2-Instance
 
 ## Pre-req:
-- a. java 1.8
-- b. Set java home path 
+- java 1.8
+- Set java home path 
 ### Install java1.8 JDK
 ```sh
 yum install java-1.8.0-openjdk
