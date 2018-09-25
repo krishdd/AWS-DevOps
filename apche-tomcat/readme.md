@@ -63,9 +63,10 @@ tomcatup - for starting tomcat
 tomcatdown - for stopping tomcat 
 ```
 ### Verify tomcat process running.
+```sh
 ps -ef|grep tomcat 
 netstat -an|grep 8080
-
+``` 
 ### NB: The default installation of tomcat will enable access GUI from local machine only. Since ec2-instance has been in this case..
 
 ### To connect remotely the following taks should be performed:
