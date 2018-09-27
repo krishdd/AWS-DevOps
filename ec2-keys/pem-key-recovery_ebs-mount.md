@@ -1,4 +1,4 @@
-# ec2-instance - lost pem key recovey: by replacing with working pem key-pair of ec2-user
+# ec2-instance - lost pem key recovey: by replacing with working pem key-pair of ec2-user of another ec2-instance
 
 1. Create a new key-pair
 or 
