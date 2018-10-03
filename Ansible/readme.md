@@ -1,5 +1,3 @@
-https://developers.redhat.com/blog/2016/09/02/how-to-install-and-configure-ansible-on-rhel/
-
 ## How to install and configure Ansible on RHEL
 
 - The easiest way to install Ansible is by adding a third-party repository named EPEL (Extra Packages for Enterprise Linux), which is maintained over at http://fedoraproject.org/wiki/EPEL. You can easily add the repo by running the following command:
