@@ -37,6 +37,14 @@ ansible --version
 To execute command on remote host:
 ```sh
 ansible <host> -m command -a “command_to_run”.
+ansible ip-10-20-30-142 -m command -a "uname -r"
 ```
-##### Run simple play boot to install httpd
+##### Run simple play book to install httpd
+```sh
+- hosts: ip-10-20-30-142
+  tasks:
+    - name: install
+      yum: name=httpd update_cache=yes state=latest
+```
+
 
