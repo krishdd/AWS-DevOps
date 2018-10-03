@@ -52,5 +52,5 @@ ansible-playbook <playbook-name>.yml
   tasks:
     - name: install
       yum: name=httpd update_cache=yes state=absent
-      ```
+```
 
