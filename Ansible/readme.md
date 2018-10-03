@@ -38,6 +38,5 @@ To execute command on remote host:
 ```sh
 ansible <host> -m command -a “command_to_run”.
 ```
-
-
+##### Run simple play boot to install httpd
 
