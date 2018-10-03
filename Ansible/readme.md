@@ -6,7 +6,7 @@ https://developers.redhat.com/blog/2016/09/02/how-to-install-and-configure-ansib
 ```sh
 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 ```
-- No other software is required as Ansible utilizes SSH to interact with remote servers.
+- No other software is required as Ansible utilizes SSH to interact with remote servers, however, if you want to execute without providing password, ssh keys must be confgiured.
 #### Installing Ansible
 ```sh
 yum update
@@ -33,6 +33,7 @@ ansible --version
 
 
 ##### Create a basic configuration
+
 To execute command on remote host:
 ```sh
 ansible <host> -m command -a “command_to_run”.
