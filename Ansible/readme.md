@@ -39,6 +39,8 @@ ansible ip-10-20-30-142 -m command -a "uname -r"
 ```
 ##### Run simple play book to install httpd
 ```sh
+ansible-playbook <playbook-name>.yml
+
 - hosts: ip-10-20-30-142
   tasks:
     - name: install
