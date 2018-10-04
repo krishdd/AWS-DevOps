@@ -4,7 +4,7 @@
 https://www.postgresql.org/download/linux/redhat/
 
 ##### Install Postgress
- ((CentOS/RHEL-7 #rpm -Uvh https://yum.postgresql.org/10/redhat/rhel-7-x86_64/pgdg-centos10-10-2.noarch.rpm ))
+CentOS/RHEL-7 #rpm -Uvh https://yum.postgresql.org/10/redhat/rhel-7-x86_64/pgdg-centos10-10-2.noarch.rpm
 ##### Install using yum 
 ```sh
 yum install postgresql-server postgresql-contrib
