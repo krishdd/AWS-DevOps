@@ -46,7 +46,7 @@ ansible-playbook <playbook-name>.yml
     - name: install
       yum: name=httpd update_cache=yes state=latest
 ```
-##### To remove packages
+##### To Remove packages
 ```sh 
 - hosts: ip-10-20-30-142
   tasks:
